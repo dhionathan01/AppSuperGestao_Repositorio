@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "Iniciando Curso LaraveL";
-});
+Route::get('/', 'PrincipalController@principal');
 
 Route::get('/sobre-nos', function () {
     return "Sobre Nós";
