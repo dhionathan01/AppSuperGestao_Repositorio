@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class SobreNosController extends Controller
 {
     public function sobreNos(){
-        echo "SobreNosController -> sobreNos() executado";
+        return view('site.sobre-nos');
     }
 }
