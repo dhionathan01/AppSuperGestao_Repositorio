@@ -10,3 +10,7 @@ php artisan make:controller SobreNosController
 ```
 php artisan make:controller ContatoController
 ```
+```
+php artisan route:list
+```
+![Alt text](image.png)
