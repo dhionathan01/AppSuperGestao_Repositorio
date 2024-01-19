@@ -14,3 +14,6 @@ php artisan make:controller ContatoController
 php artisan route:list
 ```
 ![Alt text](image.png)
+
+* Agrupando as rotas:
+![Alt text](image-1.png)
