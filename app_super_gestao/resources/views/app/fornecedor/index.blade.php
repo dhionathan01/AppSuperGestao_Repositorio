@@ -13,24 +13,23 @@
 @endphp
 
 @isset($fornecedores)
+    <!--
+    Operador condicional de valor default (??)
+    $variavel testada não estiver definida (isset)
+        ou
+    $variavel testada possui o valor null
+    -->
     Fornecedor : {{$fornecedores[0]['nome']}}
     <br>
     Status : {{$fornecedores[0]['status']}}
     <br>
-    @isset($fornecedores[0]['cnpj'])
-        CNPJ : {{$fornecedores[0]['cnpj']}}
-        @empty($fornecedores[0]['cnpj'])
-            CNPJ existente mas vazio
-        @endempty
-        <br>
-    @endisset
+    CNPJ : {{$fornecedores[0]['cnpj'] ?? 'Dado não foi preenchido'}}
+    <br>
     <hr>
     Fornecedor : {{$fornecedores[1]['nome']}}
     <br>
     Status : {{$fornecedores[1]['status']}}
     <br>
-    @isset($fornecedores[1]['cnpj'])
-        CNPJ : {{$fornecedores[1]['cnpj']}}
-        <br>
-    @endisset
+    CNPJ : {{$fornecedores[1]['cnpj'] ?? 'Dado não foi preenchido'}}
+
 @endisset
