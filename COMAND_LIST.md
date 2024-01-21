@@ -22,3 +22,7 @@ php artisan route:list
 ```
 php artisan make:controller TesteController
 ```
+* Criando controller para o fornecedor:
+```
+php artisan make:controller FornecedorController
+```
