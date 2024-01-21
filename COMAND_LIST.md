@@ -17,3 +17,8 @@ php artisan route:list
 
 * Agrupando as rotas:
 ![Alt text](image-1.png)
+
+* Criando controller com artisan:
+```
+php artisan make:controller TesteController
+```
