@@ -1,7 +1,7 @@
 teste
 <br>
-P1 = {{ $p1 }}
+P1 = {{ $abc }}
 <br>
-P2 = {{ $p2 }}
+P2 = {{ $xyz }}
 <br>
-SOMA P1 + P2 = {{$p1 + $p2}}
+SOMA P1 + P2 = {{$abc + $xyz}}
