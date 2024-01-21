@@ -1,5 +1,8 @@
 <h3>Fornecedor</h3>
-{{-- Comentário que será descartado pelo interpretador do blade --}}
+{{-- Tanto a abertura de chaves duplas quanto a tag de impressao do php são iguais observe a abaixo: --}}
+{{'teste impresao  Blade'}}
+<?='teste impressao php'?>
+
 @php
     // Para comentar uma linha dentro de um bloco php
     /* Comentários
