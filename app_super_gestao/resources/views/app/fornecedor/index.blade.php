@@ -1,18 +1,18 @@
 <h3>Fornecedor</h3>
 @php
-    /*if(){
-
-    }elseif(){
-
-    }*/
+/*
+    if(!<condição>){} Executa uma ação se ela for true
+*/
 @endphp
-{{-- A tag @dd é utilizada para exibir variaveis tipo  array --}}
-
-{{count($fornecedores)}}
-@if(count($fornecedores)> 0 && count($fornecedores) < 10)
-    <h3> Existem alguns fornecedores cadastrados </h3>
-@elseif(count($fornecedores)>10)
-    <h3>Existem muitos fornecedores cadastrados!</h3>
-@else
-    <h3>Ainda não existem fornecedores cadastrados</h3>
+{{-- @unless  executa se a ação for false --}}
+Fornecedor : {{$fornecedores[0]['nome']}}
+<br>
+Status : {{$fornecedores[0]['status']}}
+<br>
+@if(!($fornecedores[0]['status'] == 'S'))
+    Fornecedor inativo
 @endif
+<br>
+@unless($fornecedores[0]['status'] == 'S') {{-- Se o retorno da condição for false --}}
+    Fornecedor Inativo (Com unless)
+@endunless
