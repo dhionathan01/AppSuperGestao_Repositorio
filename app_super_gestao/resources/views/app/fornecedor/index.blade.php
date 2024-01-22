@@ -15,14 +15,27 @@
 @isset($fornecedores)
    {{--  Se o array estiver vazio ele desvia o fluxo para o conteudo dentro de @empty --}}
     @forelse ($fornecedores as $indice => $fornecedor )
-        Fornecedor : @{{$fornecedor['nome']}}
+        @php
+            echo '<pre>';
+            print_r($loop);
+            echo '</pre>';
+        @endphp
+        Iteração atual: {{$loop->iteration}} <BR>
+        Fornecedor : {{$fornecedor['nome']}}
         <br>
-        Status : @{{$fornecedor['status']}}
+        Status : {{$fornecedor['status']}}
         <br>
-        CNPJ : @{{$fornecedor['cnpj'] ?? ''}}
+        CNPJ : {{$fornecedor['cnpj'] ?? ''}}
         <br>
-        Telefone : @{{$fornecedor['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
+        Telefone : {{$fornecedor['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
         <br>
+        @if($loop->first)
+            Primeira iteração do loop
+            Total de registros: {{$loop->count}}
+        @endif
+        @if($loop->last)
+            Última iteração do loop<BR>
+        @endif
         <hr>
     @empty
         Não existem fornecedores cadastrados
