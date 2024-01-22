@@ -15,13 +15,13 @@
 @isset($fornecedores)
    {{--  Se o array estiver vazio ele desvia o fluxo para o conteudo dentro de @empty --}}
     @forelse ($fornecedores as $indice => $fornecedor )
-        Fornecedor : {{$fornecedor['nome']}}
+        Fornecedor : @{{$fornecedor['nome']}}
         <br>
-        Status : {{$fornecedor['status']}}
+        Status : @{{$fornecedor['status']}}
         <br>
-        CNPJ : {{$fornecedor['cnpj'] ?? ''}}
+        CNPJ : @{{$fornecedor['cnpj'] ?? ''}}
         <br>
-        Telefone : {{$fornecedor['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
+        Telefone : @{{$fornecedor['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
         <br>
         <hr>
     @empty
