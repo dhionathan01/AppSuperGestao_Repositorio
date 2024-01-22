@@ -13,7 +13,8 @@
 @endphp
 
 @isset($fornecedores)
-    @foreach ($fornecedores as $indice => $fornecedor )
+   {{--  Se o array estiver vazio ele desvia o fluxo para o conteudo dentro de @empty --}}
+    @forelse ($fornecedores as $indice => $fornecedor )
         Fornecedor : {{$fornecedor['nome']}}
         <br>
         Status : {{$fornecedor['status']}}
@@ -23,7 +24,9 @@
         Telefone : {{$fornecedor['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
         <br>
         <hr>
-    @endforeach
+    @empty
+        Não existem fornecedores cadastrados
+    @endforelse
 @endisset
 <br>
 
