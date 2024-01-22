@@ -13,50 +13,17 @@
 @endphp
 
 @isset($fornecedores)
-    Fornecedor : {{$fornecedores[1]['nome']}}
+@for ($i = 0; isset($fornecedores[$i]); $i++)
+    Fornecedor : {{$fornecedores[$i]['nome']}}
     <br>
-    Status : {{$fornecedores[1]['status']}}
+    Status : {{$fornecedores[$i]['status']}}
     <br>
-    CNPJ : {{$fornecedores[1]['cnpj'] ?? ''}}
+    CNPJ : {{$fornecedores[$i]['cnpj'] ?? ''}}
     <br>
-    Telefone : {{$fornecedores[1]['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
-    <br>
-    Cidade:
-    @switch($fornecedores[1]['ddd'])
-        @case('11')
-            São Paulo - SP
-            @break
-        @case('32')
-            Juiz de Fora - MG
-            @break
-        @case('85')
-            Fortaleza - CE
-            @break
-        @default
-            Estado Não identificado
-    @endswitch
+    Telefone : {{$fornecedores[$i]['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
     <br>
     <hr>
-    Fornecedor : {{$fornecedores[0]['nome']}}
-    <br>
-    Status : {{$fornecedores[0]['status']}}
-    <br>
-    CNPJ : {{$fornecedores[0]['cnpj'] ?? ''}}
-    <br>
-    Telefone : {{$fornecedores[0]['ddd'] ?? ''}}  {{$fornecedores[1]['telefone'] ?? ''}}
-    <br>
-    Cidade:
-    @switch($fornecedores[0]['ddd'])
-        @case('11')
-            São Paulo - SP
-            @break
-        @case('32')
-            Juiz de Fora - MG
-            @break
-        @case('85')
-            Fortaleza - CE
-            @break
-        @default
-            Estado Não identificado
-    @endswitch
+@endfor
 @endisset
+<br>
+
