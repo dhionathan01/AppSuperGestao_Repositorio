@@ -26,3 +26,10 @@ php artisan make:controller TesteController
 ```
 php artisan make:controller FornecedorController
 ```
+* Criando um model com migration :
+* OBS: O "-m" especificado no final do comando é para informar que junto com a criação desse modelo é para executar uma migration
+pois esse modelo vai ter executar operações de banco de dados
+![Alt text](image-2.png)
+```
+ php artisan make:model SiteContato -m
+```
