@@ -33,3 +33,9 @@ pois esse modelo vai ter executar operações de banco de dados
 ```
  php artisan make:model SiteContato -m
 ```
+* Criando as migrações:
+* ```php artisan migrate```
+* OBS erro :  could not find driver (SQL: PRAGMA foreign_keys = ON;) - Ao executar o migrate no sqlite
+![Alt text](image-3.png)
+* Sera necessário ir até o arquivo php.ini e remover o ; da instrução  sqlite_pdo
+* ![Alt text](image-4.png)
