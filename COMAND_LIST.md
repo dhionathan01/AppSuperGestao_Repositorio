@@ -39,3 +39,6 @@ pois esse modelo vai ter executar operações de banco de dados
 ![Alt text](image-3.png)
 * Sera necessário ir até o arquivo php.ini e remover o ; da instrução  sqlite_pdo
 * ![Alt text](image-4.png)
+* Sera necessário ir até o arquivo php.ini e remover o ; da instrução  pdo_mysql
+![Alt text](image-5.png)
+![Alt text](image-6.png)
