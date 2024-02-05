@@ -44,15 +44,21 @@ pois esse modelo vai ter executar operações de banco de dados
 ![Alt text](image-6.png)
 * migration para alterar tabela existente:
 ![Alt text](image-7.png)
-Executando migrate:
+* Executando migrate:
 ![Alt text](image-8.png)
 resultado:
 ![Alt text](image-9.png)
-Executando rollback, voltando para estrutura anterior a último migrate:
+* Executando rollback, voltando para estrutura anterior a último migrate:
 ![Alt text](image-10.png)
 resultado:
 ![Alt text](image-11.png)
 
-Rollback de passo duplo:
+* Rollback de passo duplo:
 ![Alt text](image-12.png)
 ![Alt text](image-13.png)
+
+* Criando migration para tabela de produtos
+![Alt text](image-14.png)
+
+* Criando valores default e permitindo que outros possam ser nulos;
+![Alt text](image-15.png)
