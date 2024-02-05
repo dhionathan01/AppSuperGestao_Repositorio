@@ -42,3 +42,9 @@ pois esse modelo vai ter executar operações de banco de dados
 * Sera necessário ir até o arquivo php.ini e remover o ; da instrução  pdo_mysql
 ![Alt text](image-5.png)
 ![Alt text](image-6.png)
+* migration para alterar tabela existente:
+![Alt text](image-7.png)
+Executando migrate:
+![Alt text](image-8.png)
+resultado:
+![Alt text](image-9.png)
