@@ -62,3 +62,6 @@ resultado:
 
 * Criando valores default e permitindo que outros possam ser nulos;
 ![Alt text](image-15.png)
+
+* Criando tabela produto detalhes e definindo uma chave estrangeira 1 para 1 nela
+![alt text](image-16.png)
