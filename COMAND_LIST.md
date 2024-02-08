@@ -65,3 +65,19 @@ resultado:
 
 * Criando tabela produto detalhes e definindo uma chave estrangeira 1 para 1 nela
 ![alt text](image-16.png)
+
+* Visualizando as migrations existentes:
+```php artisan migrate:status```
+![alt text](image-17.png)
+
+* Resetando o banco para o estado inicial com comando reset da migration:
+- OBS: Esse comando executa todos o métodos down da migration de forma decremental até seu estaduo inicial, como se executasse um rollback para cada migration já criada.
+``` php artisan migrate:reset```
+![alt text](image-18.png)
+
+* Refresh, esse comando executa um reset e logo em seguida um migrate , ele serve para zerar o banco e recriar:
+```php artisan migrate:refresh```
+![alt text](image-19.png)
+* Fresh, drop todos os elementos do banco e dps executa o migrate para recriar os objetos
+```php artisan:fresh```
+![alt text](image-20.png)
