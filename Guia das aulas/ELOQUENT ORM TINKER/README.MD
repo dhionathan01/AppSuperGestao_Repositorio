@@ -6,3 +6,5 @@
 * Logo podemos definir valores para seus respectivos atributos.
 - Definindo um valor para o atributo nome em tempo de execução com tinker:
 ![alt text](image-2.png)
+* Definindo alguns atributos e utilizando o metodo gettAtributes herdado de model no eloquent:
+![alt text](image-3.png)
