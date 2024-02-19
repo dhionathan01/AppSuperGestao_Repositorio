@@ -8,3 +8,11 @@
 ![alt text](image-2.png)
 * Definindo alguns atributos e utilizando o metodo gettAtributes herdado de model no eloquent:
 ![alt text](image-3.png)
+* Salvando os valores no banco de dados pelo tinker COMANDO:
+``` $contato->save();```
+
+![alt text](image-5.png)
+![alt text](image-4.png)
+
+![alt text](image-6.png)
+![alt text](image-7.png)
