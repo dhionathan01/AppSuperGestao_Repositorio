@@ -16,3 +16,11 @@
 
 ![alt text](image-6.png)
 ![alt text](image-7.png)
+
+#### Simulando erro devido ao nome da tabela:
+![alt text](image-8.png) 
+* Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
+![alt text](image-9.png)
+* Sucesso na inserção dos valores:
+![alt text](image-10.png)
+![alt text](image-11.png)
