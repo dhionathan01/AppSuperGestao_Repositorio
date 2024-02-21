@@ -24,3 +24,6 @@
 * Sucesso na inserção dos valores:
 ![alt text](image-10.png)
 ![alt text](image-11.png)
+
+#### Criando registros com metodo estático create, utilizando o atributo fillable:
+![alt text](image-12.png)
