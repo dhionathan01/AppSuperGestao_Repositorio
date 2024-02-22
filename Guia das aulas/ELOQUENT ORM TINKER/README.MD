@@ -4,7 +4,7 @@
 * As clases instanciadas pelo eloquent orm, vem do banco de dados herdando como atributo todas as suas colunas:
 ![alt text](image-1.png)
 * Logo podemos definir valores para seus respectivos atributos.
-- Definindo um valor para o atributo nome em tempo de execuÁ„o com tinker:
+- Definindo um valor para o atributo nome em tempo de execu√ß√£oo com tinker:
 ![alt text](image-2.png)
 * Definindo alguns atributos e utilizando o metodo gettAtributes herdado de model no eloquent:
 ![alt text](image-3.png)
@@ -17,7 +17,7 @@
 ![alt text](image-6.png)
 ![alt text](image-7.png)
 
-* Criando registros com metodo est·tico create, utilizando o atributo fillable:
+* Criando registros com metodo est√°tico create, utilizando o atributo fillable:
 ![alt text](image-12.png)
 * Recuperando registros com all();
 ![alt text](image-13.png)
@@ -27,11 +27,19 @@
 ![alt text](image-15.png)
 ![alt text](image-16.png)
 
+* Recuperand registros com where();
+```ClasseModel::where('nome_coluna', 'operador_comparacao', 'valor_comparacao')```
+![alt text](image-17.png)
+No caso de pesquisas em igual n√£o √© necess√°rio utilizar o = :
+![alt text](image-18.png)
+
+Utilizando operador like na busca com where:
+![alt text](image-19.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
 ![alt text](image-9.png)
-* Sucesso na inserÁ„o dos valores:
+* Sucesso na inser√ß√£o dos valores:
 ![alt text](image-10.png)
 ![alt text](image-11.png)
 
