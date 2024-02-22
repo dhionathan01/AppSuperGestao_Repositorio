@@ -22,6 +22,11 @@
 * Recuperando registros com all();
 ![alt text](image-13.png)
 ![alt text](image-14.png)
+
+* Recuperando registros com find();
+![alt text](image-15.png)
+![alt text](image-16.png)
+
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
