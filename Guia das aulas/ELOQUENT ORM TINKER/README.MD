@@ -44,8 +44,14 @@ Utilizando operador like na busca com where:
 
 * Busca com whereNotIn();
 ```$contatos = SiteContato::whereNotIn('campo_a_ser_comparado_por_diferente', 'conjunto_de_parametros');```
-
 ![alt text](image-21.png)
+
+* Buscando com whereBetween();
+``` $contatos = SiteContato::whereBetween('campo_a_ser_comparado', parametros_de_intervalo);
+```
+![alt text](image-22.png)
+* Buscando com whereNotBetween();
+![alt text](image-23.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
