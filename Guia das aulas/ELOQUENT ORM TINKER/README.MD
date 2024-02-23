@@ -28,7 +28,9 @@
 ![alt text](image-16.png)
 
 * Recuperand registros com where();
-```ClasseModel::where('nome_coluna', 'operador_comparacao', 'valor_comparacao');```
+```
+ClasseModel::where('nome_coluna', 'operador_comparacao', 'valor_comparacao');
+```
 ![alt text](image-17.png)
 No caso de pesquisas em igual não é necessário utilizar o = :
 ![alt text](image-18.png)
@@ -47,11 +49,17 @@ Utilizando operador like na busca com where:
 ![alt text](image-21.png)
 
 * Buscando com whereBetween();
-``` $contatos = SiteContato::whereBetween('campo_a_ser_comparado', parametros_de_intervalo);
+``` 
+$contatos = SiteContato::whereBetween('campo_a_ser_comparado', parametros_de_intervalo);
 ```
 ![alt text](image-22.png)
 * Buscando com whereNotBetween();
 ![alt text](image-23.png)
+* Busca com where encadeados:
+```
+$contatos = SiteContato::where('nome', '<>', 'fernando')->whereIn('motivo_contato', [1, 2])->whereBetween('created_at', ['2024-01-01 00:00:00', '2024-02-29 23:59:59'])->get();
+```
+![alt text](image-24.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
