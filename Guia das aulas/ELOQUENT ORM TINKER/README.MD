@@ -28,13 +28,24 @@
 ![alt text](image-16.png)
 
 * Recuperand registros com where();
-```ClasseModel::where('nome_coluna', 'operador_comparacao', 'valor_comparacao')```
+```ClasseModel::where('nome_coluna', 'operador_comparacao', 'valor_comparacao');```
 ![alt text](image-17.png)
 No caso de pesquisas em igual não é necessário utilizar o = :
 ![alt text](image-18.png)
 
 Utilizando operador like na busca com where:
 ![alt text](image-19.png)
+
+* Busca com whereIn();
+```
+ $contatos = SiteContato::whereIn('campo_a_ser_comparado_por_igual', 'conjunto_de_parametros');
+```
+![alt text](image-20.png)
+
+* Busca com whereNotIn();
+```$contatos = SiteContato::whereNotIn('campo_a_ser_comparado_por_diferente', 'conjunto_de_parametros');```
+
+![alt text](image-21.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
