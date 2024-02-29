@@ -58,8 +58,15 @@ $contatos = SiteContato::whereBetween('campo_a_ser_comparado', parametros_de_int
 * Busca com where encadeados:
 ```
 $contatos = SiteContato::where('nome', '<>', 'fernando')->whereIn('motivo_contato', [1, 2])->whereBetween('created_at', ['2024-01-01 00:00:00', '2024-02-29 23:59:59'])->get();
-```
 ![alt text](image-24.png)
+```
+* Buscando registros com orWhere encadeados.
+- OBS: Para concatenar OR conditions na query basta colocar um or antes dos métódos já conhecidos, como orWhereBetween, orWhereIN ...
+```
+ $contatos = SiteContato::where('nome', '<>', 'Fernando')->orWhereIn('motivo_contato', [1,2])->orWhereBetween('created_at', ['2024-01-01 00:00:00', '2024
+-02-29 23:59:59'])->get();
+```
+![alt text](image-25.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
