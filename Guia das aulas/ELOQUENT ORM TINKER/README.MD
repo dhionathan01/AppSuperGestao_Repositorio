@@ -67,6 +67,18 @@ $contatos = SiteContato::where('nome', '<>', 'fernando')->whereIn('motivo_contat
 -02-29 23:59:59'])->get();
 ```
 ![alt text](image-25.png)
+
+* Recuperando valores com whereNull:
+```
+ $contatos = SiteContato::whereNull('updated_at')->get();
+```
+![alt text](image-26.png)
+
+* Recuperando valores com whereNotNull:
+```
+ $contatos = SiteContato::whereNotNull('updated_at')->get();
+```
+![alt text](image-27.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
