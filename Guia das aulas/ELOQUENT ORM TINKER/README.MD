@@ -106,6 +106,12 @@ OBS: O operador pode mudar de igual, para maior , menor ou diferente.
 $contatos = SiteContato::whereTime('created_at', '=', '10:37:41')
 ```
 ![alt text](image-32.png)
+
+Recuperando registros com whereColumn:
+```
+ $contatos = SiteContato::whereColumn('created_at', '>=', 'updated_at')->get()
+```
+![alt text](image-33.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
