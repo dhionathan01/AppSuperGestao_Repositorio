@@ -79,6 +79,33 @@ $contatos = SiteContato::where('nome', '<>', 'fernando')->whereIn('motivo_contat
  $contatos = SiteContato::whereNotNull('updated_at')->get();
 ```
 ![alt text](image-27.png)
+
+* Recuperar por meio das funções where voltadas para datas:
+- whereDate:
+```
+ $contatos = SiteContato::whereDate('created_at', '2024-02-19')->get()
+```
+![alt text](image-28.png)
+- whereYear:
+```
+$contatos = SiteContato::whereYear('created_at', '2024')->get();
+```
+![alt text](image-29.png)
+- whereMonth:
+```
+$contatos = SiteContato::whereMonth('created_at', '2')->get();
+``` 
+![alt text](image-30.png)
+- whereDay:
+```
+$contatos = SiteContato::whereDay('created_at', '19')->get();
+```
+- whereTime :
+OBS: O operador pode mudar de igual, para maior , menor ou diferente.
+```
+$contatos = SiteContato::whereTime('created_at', '=', '10:37:41')
+```
+![alt text](image-32.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
