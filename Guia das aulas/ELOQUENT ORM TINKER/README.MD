@@ -112,6 +112,13 @@ Recuperando registros com whereColumn:
  $contatos = SiteContato::whereColumn('created_at', '>=', 'updated_at')->get()
 ```
 ![alt text](image-33.png)
+
+* Recuperando registros aplicando precedência em operacoes lógica ou seja  subGrupos , no caso colocando parentenses na query...
+```
+$contatos = SiteContato::where(function ($query){$query->where('nome', 'like', '%dhionathan%')->orWhere('nome', 'like', '%helena%');})->where(function ($query){$quer
+y->whereIn('motivo_contato', [1,2]);})->orWhereBetween('id', [4,6])->get();
+```
+![alt text](image-34.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
