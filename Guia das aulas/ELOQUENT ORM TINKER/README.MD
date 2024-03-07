@@ -119,6 +119,19 @@ $contatos = SiteContato::where(function ($query){$query->where('nome', 'like', '
 y->whereIn('motivo_contato', [1,2]);})->orWhereBetween('id', [4,6])->get();
 ```
 ![alt text](image-34.png)
+
+* Recuperando registros e ordenando com orderBy:
+```
+$contatos = SiteContato::orderBy('nome', 'desc')->get();
+```
+![alt text](image-35.png)
+
+* Combinando orderBy com condições where:
+```
+$contatos = SiteContato::whereBetween('id', [2,6])->orderBy('nome', 'desc')->get();
+
+```
+![alt text](image-36.png)
 #### Simulando erro devido ao nome da tabela:
 ![alt text](image-8.png) 
 * Ajustando o erro sobrepondo o valor de table direto na instancia da orm:
