@@ -170,3 +170,9 @@ $contatos = SiteContato::whereBetween('id', [2,6])->orderBy('nome', 'desc')->get
 * Atualizando Registro com save
 ```  $fornecedor->save();```
 ![alt text](image-43.png)
+
+* Atualizando registros com fill
+OBS: vale ressaltar que para utilizar o metro fill, os atributos tem que de ser permitidos pelo atributo protect fillable na model:
+![alt text](image-45.png)
+```$fornecedor2->fill(['nome' => 'Fornecedor 789', 'site' => 'www.fornecedor789.com.br', 'email'=> 'contato@fornecedor789.com.br']); ```
+![alt text](image-44.png)
