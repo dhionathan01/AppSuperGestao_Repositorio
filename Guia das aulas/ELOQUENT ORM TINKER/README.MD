@@ -140,6 +140,14 @@ $contatos = SiteContato::whereBetween('id', [2,6])->orderBy('nome', 'desc')->get
 ```
 ![alt text](image-36.png)
 
-
-
+#### Estudando collections
+* Instrução para recuperar o primeiro objeto de uma collection, uma collection é um array de objetos
+```$contatos->first();```
+![alt text](image-37.png)
+* Instrução para recuperar o último objeto da collection:
+```$contatos->last();```
+![alt text](image-38.png)
+* Reverter a ordem dos objetos:
+ ```$contatos->reverse();```
+![alt text](image-39.png)
 
