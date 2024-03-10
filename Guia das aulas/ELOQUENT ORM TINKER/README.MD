@@ -151,3 +151,10 @@ $contatos = SiteContato::whereBetween('id', [2,6])->orderBy('nome', 'desc')->get
  ```$contatos->reverse();```
 ![alt text](image-39.png)
 
+* Convertendo o collection para array:
+``` SiteContato::all()->toArray(); ```
+![alt text](image-40.png)
+
+* Convertendo para Json:
+ SiteContato::all()->toJson();
+![alt text](image-41.png)
