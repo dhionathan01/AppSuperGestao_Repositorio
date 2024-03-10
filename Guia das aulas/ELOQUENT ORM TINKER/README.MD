@@ -158,3 +158,11 @@ $contatos = SiteContato::whereBetween('id', [2,6])->orderBy('nome', 'desc')->get
 * Convertendo para Json:
  SiteContato::all()->toJson();
 ![alt text](image-41.png)
+
+* Método pluck:
+- Ele criar um colection contendo somente o indice passado.
+- E possível utilizar a funções nativas das collections sobre o retorno do pluck
+- E possível já passar um parametro para que se torne um array associativo cmo pode ver na última opção
+
+```SiteContato::all()->pluck('email');```
+![alt text](image-42.png)
