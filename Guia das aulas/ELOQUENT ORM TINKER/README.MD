@@ -176,3 +176,7 @@ OBS: vale ressaltar que para utilizar o metro fill, os atributos tem que de ser 
 ![alt text](image-45.png)
 ```$fornecedor2->fill(['nome' => 'Fornecedor 789', 'site' => 'www.fornecedor789.com.br', 'email'=> 'contato@fornecedor789.com.br']); ```
 ![alt text](image-44.png)
+
+* Atualizando fornecedores com update:
+``` $fornecedor2 = Fornecedor::whereIn('id', [1,2])->update(['nome' => 'Fornecedor Teste Update', 'site' => 'Fornecedor Site Update']); ```
+![alt text](image-46.png)
