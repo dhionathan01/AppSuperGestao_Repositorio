@@ -166,3 +166,7 @@ $contatos = SiteContato::whereBetween('id', [2,6])->orderBy('nome', 'desc')->get
 
 ```SiteContato::all()->pluck('email');```
 ![alt text](image-42.png)
+
+* Atualizando Registro com save
+```  $fornecedor->save();```
+![alt text](image-43.png)
