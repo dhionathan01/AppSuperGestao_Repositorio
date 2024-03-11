@@ -186,3 +186,13 @@ OBS: vale ressaltar que para utilizar o metro fill, os atributos tem que de ser 
 ![alt text](image-47.png)
 OBS: o comando destroy, pode ser passando tanto um array de ids ou collection de ids.
 ![alt text](image-48.png)
+
+* Implementando softdelete na migration e executando:
+![alt text](image-50.png)
+![alt text](image-49.png)
+OBS: O softdelete ele mantem o registro no banco, apenas preenche a coluna delete_at quando feito algum delete.
+![alt text](image-51.png)
+![alt text](image-52.png)
+* Force delete remove defintivamente o dado da tabela, mesmo com o softDelete ativo:
+![alt text](image-53.png)
+![alt text](image-54.png)
