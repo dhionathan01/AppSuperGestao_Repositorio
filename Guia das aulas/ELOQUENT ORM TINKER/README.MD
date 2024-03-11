@@ -180,3 +180,9 @@ OBS: vale ressaltar que para utilizar o metro fill, os atributos tem que de ser 
 * Atualizando fornecedores com update:
 ``` $fornecedor2 = Fornecedor::whereIn('id', [1,2])->update(['nome' => 'Fornecedor Teste Update', 'site' => 'Fornecedor Site Update']); ```
 ![alt text](image-46.png)
+
+* Deletando registros com delete:
+```$contato->delete();Site```
+![alt text](image-47.png)
+OBS: o comando destroy, pode ser passando tanto um array de ids ou collection de ids.
+![alt text](image-48.png)
