@@ -196,3 +196,14 @@ OBS: O softdelete ele mantem o registro no banco, apenas preenche a coluna delet
 * Force delete remove defintivamente o dado da tabela, mesmo com o softDelete ativo:
 ![alt text](image-53.png)
 ![alt text](image-54.png)
+
+* Recuperando todos os registros incluindo que foram deletados com o softdelete
+```$fornecedor = Fornecedor::withTrashed()->get();```
+![alt text](image-56.png)
+
+* Recuperando apenas os que foram deletados com softdelete:
+``` $fornecedor = Fornecedor::onlyTrashed()->get();```
+![alt text](image-57.png)
+* Restaurando registros com restore.
+```$fornecedores[0]->restore(); ```
+![alt text](image-58.png)
