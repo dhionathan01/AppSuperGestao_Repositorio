@@ -207,3 +207,13 @@ OBS: O softdelete ele mantem o registro no banco, apenas preenche a coluna delet
 * Restaurando registros com restore.
 ```$fornecedores[0]->restore(); ```
 ![alt text](image-58.png)
+
+#### Iniciando Seeders
+* Limpando o banco de dados
+``` php artisan migrate:fresh ```
+![alt text](image-59.png)
+* Criando a seeder
+```php artisan make:seeder FornecedoreSeeder```
+* Executando as seeders:
+``` $ php artisan db:seed ```
+![alt text](image-60.png)
