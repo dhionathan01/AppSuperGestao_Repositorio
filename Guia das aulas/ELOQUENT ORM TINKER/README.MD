@@ -223,3 +223,9 @@ OBS: O softdelete ele mantem o registro no banco, apenas preenche a coluna delet
 * Executando a chamada de uma seeder específica:
 ```$ php artisan db:seed --class=SiteContatoSeeder```
 ![alt text](image-61.png)
+* Criando uma factory:
+```php artisan make:factory SiteContatoFactory --model=SiteContato ```
+![alt text](image-62.png)
+* Executando a factory na seeder:
+```$ php artisan  db:seed --class=SiteContatoSeeder ```
+![alt text](image-63.png)
