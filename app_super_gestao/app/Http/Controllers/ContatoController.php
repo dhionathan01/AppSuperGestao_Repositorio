@@ -9,12 +9,11 @@ class ContatoController extends Controller
     public function contato(Request $request){
 
         $contato = new SiteContato();
-        $contato->nome = $request->input('nome');
-        $contato->telefone = $request->input('telefone');
-        $contato->email = $request->input('email');
-        $contato->motivo_contato = $request->input('motivo_contato');
-        $contato->mensagem = $request->input('mensagem');
-        $contato->save();
+        //$contato->fill($request->all());
+        //$contato->save();
+        // invés do save usar o metodo created
+        $contato->create($request->all());
+
         print_r($contato->getAttributes());
         $titulo = 'Contato (Controller Definição)';
         return view('site.contato', compact('titulo'));
