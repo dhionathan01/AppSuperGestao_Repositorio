@@ -7,7 +7,12 @@ use App\SiteContato;
 class ContatoController extends Controller
 {
     public function contato(Request $request){
+        $motivos_contato = [
+            '1' => 'Dúvida',
+            '2' => 'Elogio',
+            '3' => 'Reclamação',
 
+        ];
         $contato = new SiteContato();
         //$contato->fill($request->all());
         //$contato->save();
@@ -16,7 +21,7 @@ class ContatoController extends Controller
 
         print_r($contato->getAttributes());*/
         $titulo = 'Contato (Controller Definição)';
-        return view('site.contato', compact('titulo'));
+        return view('site.contato', compact('titulo','motivos_contato'));
     }
 
     public function salvar(Request $request){
