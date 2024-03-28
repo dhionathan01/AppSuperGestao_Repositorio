@@ -7,7 +7,7 @@ use App\SiteContato;
 class ContatoController extends Controller
 {
     public function contato(Request $request){
-        $motivos_contato = MotivoContato::all();
+        $motivo_contatos= MotivoContato::all();
         $contato = new SiteContato();
         //$contato->fill($request->all());
         //$contato->save();
@@ -16,7 +16,7 @@ class ContatoController extends Controller
 
         print_r($contato->getAttributes());*/
         $titulo = 'Contato (Controller Definição)';
-        return view('site.contato', compact('titulo','motivos_contato'));
+        return view('site.contato', compact('titulo','motivo_contatos'));
     }
 
     public function salvar(Request $request){
