@@ -16,7 +16,7 @@ class ContatoController extends Controller
 
         print_r($contato->getAttributes());*/
         $titulo = 'Contato (Controller Definição)';
-        return view('site.contato', compact('titulo','motivo_contatos'));
+        return view('site.contato', compact('titulo','motivos_contato'));
     }
 
     public function salvar(Request $request){
@@ -24,7 +24,7 @@ class ContatoController extends Controller
         $request->validate([
             'nome' => 'required|min:3|max:40', // nomes com no mínimo 3 caracteres e no máximo 40
             'telefone' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'motivo_contato' => 'required',
             'mensagem' => 'required|max:2000',
         ]);
