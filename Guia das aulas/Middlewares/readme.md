@@ -26,3 +26,5 @@ php artisan migrate
 ![alt text](image-7.png)
 * Salvando Log de Acesso:
 ![alt text](image-9.png)
+* Colocando middleware para todas as rotas web:
+![alt text](image-10.png)
