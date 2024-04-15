@@ -21,16 +21,13 @@ Route::get('/login/{erro?}', 'LoginController@index')->name('site.login');
 Route::post('/login', 'LoginController@autenticar')->name('site.login');
 
 Route::middleware('autenticacao:padrao, visitante, p3, p4')->prefix('/app')->group(function(){
-    Route::middleware('autenticacao')
-        ->get('/clientes', function(){return 'Clientes';})
+    Route::get('/clientes', function(){return 'Clientes';})
         ->name('app.clientes');
 
-    Route::middleware('autenticacao')
-    ->get('/fornecedores', 'FornecedorController@index')
+    Route::get('/fornecedores', 'FornecedorController@index')
     ->name('app.fornecedores');
 
-    Route::middleware('autenticacao')
-    ->get('/produtos', function(){return 'Produtos';})
+    Route::get('/produtos', function(){return 'Produtos';})
     ->name('app.produtos');
 });
 
