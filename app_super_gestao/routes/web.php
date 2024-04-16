@@ -28,7 +28,7 @@ Route::middleware('autenticacao:padrao, visitante, p3, p4')->prefix('/app')->gro
         ->name('app.cliente');
 
     Route::get('/fornecedore', 'FornecedorController@index')
-    ->name('app.fornecedore');
+    ->name('app.fornecedor');
 
     Route::get('/produto', 'ProdutoController@index')
     ->name('app.produto');
