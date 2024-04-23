@@ -12,10 +12,10 @@ class ProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        echo "Index";
+        $produtos = Produto::paginate(10);
+        return view('app.produto.index', array('produtos'=>$produtos, 'request' => $request->all()));
     }
 
     /**

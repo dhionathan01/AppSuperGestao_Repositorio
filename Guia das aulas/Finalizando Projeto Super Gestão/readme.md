@@ -19,3 +19,19 @@ php artisan make:controller --resource ProdutoController --model=Produto
 ```php artisan route:list ```
 
 ![alt text](image-3.png)
+
+* Criando modelo unidade:
+
+``` php artisan make:model Unidade ``` 
+![alt text](image-4.png)
+
+* Inserindo Produtos e Unidade pelo Tinker:
+```
+> use App\Unidade;
+> Unidade::create(['unidade'=> 'UN', 'descricao' => 'Unidade']);
+```
+```
+> use App\Produto;
+> Produto::create(['nome'=> 'Geladeira', 'descricao'=> 'Geladeira/Refrigerador Frost Free 375 litros', 'peso'=> '60', 'unidade_id'=> '1']);
+```
+![terminal tinker- inserindo registros](image-5.png)
