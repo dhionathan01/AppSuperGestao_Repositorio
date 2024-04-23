@@ -60,4 +60,8 @@ class FornecedorController extends Controller
         $fornecedor = Fornecedor::find($id);
         return view('app.fornecedor.adicionar', array('fornecedor' => $fornecedor, 'msg' => $msg));
     }
+    public function excluir($id){
+        Fornecedor::find($id)->delete();
+        return redirect()->route('app.fornecedor');
+    }
 }
