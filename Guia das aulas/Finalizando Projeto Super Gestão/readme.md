@@ -13,3 +13,9 @@
 php artisan make:controller --resource ProdutoController --model=Produto
 ```
 ![Criando Controller com resource](image-2.png)
+
+* Lista de rotas com a criação do resources:
+
+```php artisan route:list ```
+
+![alt text](image-3.png)
