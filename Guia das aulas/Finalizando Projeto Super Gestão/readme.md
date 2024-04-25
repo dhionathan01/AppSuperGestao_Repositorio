@@ -62,3 +62,9 @@ php artisan make:controller --resource ProdutoController --model=Produto
 ```$ php artisan make:model ItemDetalhe ```
 ![alt text](image-10.png)
 
+* Criando migration para fazer relacionaemnto de produtos a fornecedores:
+
+```php artisan make:migration alter_produtos_relacionamento_fornecedores```
+
+![alt text](image-11.png)
+
