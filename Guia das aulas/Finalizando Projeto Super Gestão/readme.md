@@ -35,3 +35,14 @@ php artisan make:controller --resource ProdutoController --model=Produto
 > Produto::create(['nome'=> 'Geladeira', 'descricao'=> 'Geladeira/Refrigerador Frost Free 375 litros', 'peso'=> '60', 'unidade_id'=> '1']);
 ```
 ![terminal tinker- inserindo registros](image-5.png)
+
+* Criando model Produto Detalhe.
+
+```$ php artisan make:model ProdutoDetalhe```
+
+![alt text](image-6.png)
+
+* Criando controller ProdutoDetalhe.
+
+```php artisan make:controller --resource ProdutoDetalheControlle```
+![alt text](image-7.png)
