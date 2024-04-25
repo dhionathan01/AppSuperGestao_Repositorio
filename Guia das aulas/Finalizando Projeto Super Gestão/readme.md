@@ -53,3 +53,12 @@ php artisan make:controller --resource ProdutoController --model=Produto
 
 ![alt text](image-8.png)
 ![alt text](image-9.png)
+
+#### Fazendo relacionamento com hasOne e belongsTo para nomes não padronizados:
+
+* Criando os models Item e ItemDetalhe, para substituir pelo produto e produtoDetalhe
+
+```$ php artisan make:model Item ```
+```$ php artisan make:model ItemDetalhe ```
+![alt text](image-10.png)
+
