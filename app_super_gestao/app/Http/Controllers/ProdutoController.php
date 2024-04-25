@@ -17,7 +17,8 @@ class ProdutoController extends Controller
      */
     public function index(Request $request)
     {
-        $produtos = Item::paginate(10);
+        // Aplicação do eager loading, para ao carregar o item já trazer seus relacionamentos sem a necessidade de que seja efetuada uma chamada do método do relacionamento
+        $produtos = Item::with(['itemDetalhe'])->paginate(10);
         return view('app.produto.index', array('produtos'=>$produtos, 'request' => $request->all()));
     }
 
