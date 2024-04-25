@@ -46,3 +46,10 @@ php artisan make:controller --resource ProdutoController --model=Produto
 
 ```php artisan make:controller --resource ProdutoDetalheControlle```
 ![alt text](image-7.png)
+
+* Ajuste na tabela produtoDetalhe - Criei errado durante o curso, reparando pelo migrate
+
+```$ php artisan make:migration alter_table_produto_detalhes```
+
+![alt text](image-8.png)
+![alt text](image-9.png)
