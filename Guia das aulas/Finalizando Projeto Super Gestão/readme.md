@@ -68,3 +68,23 @@ php artisan make:controller --resource ProdutoController --model=Produto
 
 ![alt text](image-11.png)
 
+* Criando os modelos para implementação dos relacionamentos N para N
+
+```php artisan make:model Cliente```
+```php artisan make:model Pedido```
+```php artisan make:model PedidoProduto```
+
+![alt text](image-12.png)
+
+* Criando migration para os relacionamentos
+
+```php artisan make:migration create_clientes_pedidos_produtos```
+
+![alt text](image-13.png)
+
+* Executando migrate para a criação das tabelas:
+
+```php artisan migrate```
+
+![alt text](image-14.png)
+![alt text](image-15.png)
