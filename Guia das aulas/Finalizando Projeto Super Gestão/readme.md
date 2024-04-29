@@ -88,3 +88,12 @@ php artisan make:controller --resource ProdutoController --model=Produto
 
 ![alt text](image-14.png)
 ![alt text](image-15.png)
+
+* Criando controlladores e rotas para clientes, pedidos e pedidos_produtos
+
+  * Criando ClienteController.
+    ``` php artisan make:controller --resource ClienteController ```
+  * Criando PedidoController.
+    ``` php artisan make:controller --resource PedidoController ```
+  * Criando PedidoProdutoController.
+    ``` php artisan make:controller --resource PedidoProdutoController ```
