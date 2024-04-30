@@ -38,10 +38,6 @@ class ProdutoDetalheController extends Controller
      */
     public function store(Request $request)
     {
-        echo '<pre>';
-        print_r($request->all());
-        echo '</pre>';
-
         ProdutoDetalhe::create($request->all());
         echo "Cadastro realizado com sucesso";
     }
