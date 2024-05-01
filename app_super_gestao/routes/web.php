@@ -21,6 +21,9 @@ Route::get('/login/{erro?}', 'LoginController@index')->name('site.login');
 Route::post('/login', 'LoginController@autenticar')->name('site.login');
 
 Route::middleware('autenticacao:padrao, visitante, p3, p4')->prefix('/app')->group(function(){
+    Route::get('/contato-listar', 'ContatoController@listar')->name('app.contato.listar');
+    Route::get('/contato/show/{contato}', 'ContatoController@show')->name('app.contato.show');
+    Route::get('/contato/excluir/{contato}', 'ContatoController@destroy')->name('app.contato.excluir');
     Route::get('/home', 'HomeController@index')->name('app.home');
     Route::get('/sair', 'LoginController@sair')->name('app.sair');
     Route::get('/fornecedor', 'FornecedorController@index')->name('app.fornecedor');

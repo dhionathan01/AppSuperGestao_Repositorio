@@ -43,4 +43,18 @@ class ContatoController extends Controller
         SiteContato::create($request->all());
         return redirect()->route('site.index');
     }
+    public function show(SiteContato $siteContato){
+        return view('app.contato.show', ['siteContato' => $siteContato]);
+
+    }
+    public function listar(Request $request){
+        $contatos = SiteContato::with(['motivo_contato'])->paginate(5);
+        return view('app.contato.listar', ['contatos' => $contatos, 'request' => $request->all()]);
+
+    }
+    public function destroy($id){
+        $siteContato = SiteContato::find($id);
+        $siteContato->delete();
+        return redirect()->route('app.contato.listar');
+    }
 }

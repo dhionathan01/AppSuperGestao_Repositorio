@@ -10,6 +10,7 @@
             <li><a href="{{ route('pedido.index') }}">Pedido</a></li>
             <li><a href="{{ route('app.fornecedor') }}">Fornecedor</a></li>
             <li><a href="{{ route('produto.index') }}">Produto</a></li>
+            <li><a href="{{ route('app.contato.listar') }}">Contatos</a></li>
             <li><a href="{{ route('app.sair') }}">Sair</a></li>
         </ul>
     </div>
