@@ -203,3 +203,18 @@ button:hover {
     list-style-type: none;
 }
 
+.welcome-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.welcome-container h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}

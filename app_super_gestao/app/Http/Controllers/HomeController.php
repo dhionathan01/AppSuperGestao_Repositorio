@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        return view('app.home');
+    public function index(Request $request){
+        $nome = ucwords($_SESSION['nome']);
+        return view('app.home', ['nome' => $nome]);
     }
 }

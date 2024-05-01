@@ -19,15 +19,12 @@
                         <tr>
                             <th>Nome</th>
                             <th></th>
-                            <th></th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                        @foreach ($clientes as $cliente)
                             <tr>
                                 <td>{{ $cliente->nome }}</td>
-                                <td><a href="{{route('cliente.show', ['cliente' => $cliente->id])}}">Visualizar</a></td>
                                 <td>
                                     <form id="form_{{$cliente->id}}" action="{{route('cliente.destroy', ['cliente' => $cliente->id])}}" method="post">
                                         @method('DELETE')
@@ -35,7 +32,6 @@
                                         <a href="#" onclick="document.getElementById('form_{{$cliente->id}}').submit()">Excluir</a>
                                     </form>
                                 </td>
-                                <td><a href="{{route('cliente.edit', ['cliente' => $cliente->id])}}">Editar</a></td>
                             </tr>
                        @endforeach
                     </tbody>

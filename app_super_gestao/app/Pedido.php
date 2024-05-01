@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pedido extends Model
 {
+    public function cliente(){
+        return $this->hasOne('App\Cliente', 'id', 'cliente_id');
+    }
+
     public function produtos(){
         return $this->belongsToMany('App\Item', 'pedido_produtos', 'pedido_id', 'produto_id')->withPivot('id','created_at', 'updated_at');
         /*
