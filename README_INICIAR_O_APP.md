@@ -2,7 +2,7 @@
 Projeto Curso Desenvolvimento web Avançado com Laravel
 
 ## Comandos Artisan:
-* Para iniciar nosso servidor agora invpes de usar o "php -S localhost:8000" iremos utilizar o artisan, para isso usaremos o seguinte comando:
+* Para iniciar nosso servidor navegue até a pasta app_super_gestao e invés de usar o "php -S localhost:8000" utilizar o artisan a iniciar o servidor, para isso use o seguinte comando:
 ```
 php artisan serve
 ```
